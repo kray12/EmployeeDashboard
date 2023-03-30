@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do list</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <!-- <script>src="https://code.jquery.com/jquery-3.6.0.js"</script>  -->
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="tdlId" placeholder="..."><button id="tdlAddBtn" >+</button>
+        <div id="to-dos">
+            <ol id="tdlOL">
+                <li>eat dinner</li>
+
+            </ol>
+        </div>
+    </div>
+    <script>
+         $(document).on('click', '#tdlAddBtn', function(event) {
+
+            var TdlInput = $("#tdlId").val();
+            // var Tdldiv = $("#to-dos").val();
+            // var tdlAddBtn = $("#tdlAddBtn").val();
+            var newInputtext= $("#tdlOL").append("<li>"+ TdlInput +"</li>");
+        
+
+
+        })
+    </script>
+</body>
+</html>
